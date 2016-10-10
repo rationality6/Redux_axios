@@ -12,6 +12,11 @@ class Counter extends Component {
         super(props);
         this.setRandomColor = this.setRandomColor.bind(this);
         this.handleTextCopy = this.handleTextCopy.bind(this);
+        this.handleRandomNumber = this.handleRandomNumber.bind(this);
+    }
+
+    handleRandomNumber(){
+      console.log('foo');
     }
 
     setRandomColor(){
@@ -40,6 +45,9 @@ class Counter extends Component {
                 <Control
                     onPlus={this.props.handleIncrement}
                     onSubtract={this.props.handleDecrement}
+                    onTimes={this.props.handleTimes}
+                    onDivied={this.props.handleDivied}
+                    onRandomNumber={this.handleRandomNumber}
                     onRandomizeColor={this.setRandomColor}
                 ></Control>
             <p>{this.props.text}</p>
@@ -68,6 +76,8 @@ const mapDispatchToProps = (dispatch) => {
         handleDecrement:() => {dispatch(actions.decrement())},
         handleSetColor:(color) => {dispatch(actions.setColor(color))},
         handleTextCopy:(text) => {dispatch(actions.typeCopy(text))},
+        handleTimes:() => {dispatch(actions.times())},
+        handleDivied:() => {dispatch(actions.divied())},
     };
 };
 

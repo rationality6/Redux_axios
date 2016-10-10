@@ -31,6 +31,21 @@ export default function counter(state = initialState, action) {
           b: 3
         }
       }
+    case types.TIMES:
+      return {
+        ...state,
+        number: state.number * 2
+      }
+    case types.DIVIED:
+      return{
+        ...state,
+        number: state.number / 2
+      }
+    case types.RANDOMNUMBER:
+      return{
+        ...state,
+        number: action.number
+      }
     default:
       return state;
   }
