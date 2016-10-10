@@ -10,7 +10,6 @@ export default function users(state = initialState, action) {
         }
 
         default:
-            console.log("default")
             return state;
     }
 }

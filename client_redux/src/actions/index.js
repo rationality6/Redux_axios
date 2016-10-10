@@ -13,8 +13,8 @@ export function times() {
   return {type: types.TIMES}
 }
 
-export function divied() {
-  return {type: types.DIVIED}
+export function divide() {
+  return {type: types.DIVIDE}
 }
 
 export function randomNumber(num){
@@ -29,6 +29,7 @@ export function typeCopy(text) {
   return {type: types.TYPE_COPY, text}
 }
 
+
 //Buttons
 export function incre() {
   return {type: types.INCRE}
@@ -36,6 +37,14 @@ export function incre() {
 
 export function decre() {
   return {type: types.DECRE}
+}
+
+export function times1(){
+  return {type:types.TIMES1}
+}
+
+export function divide1(){
+  return {type:types.DIVIDE1}
 }
 
 export const increment1 = () => {
@@ -49,6 +58,7 @@ export function decrement1() {
 export function typing(text) {
   return {type: types.TYPING, text}
 }
+
 
 //Users
 export function setUserData(data) {

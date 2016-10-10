@@ -24,7 +24,7 @@ class Control extends Component {
           <button onClick={this.props.onPlus}>+</button>
           <button onClick={this.props.onSubtract}>-</button>
           <button onClick={this.props.onTimes}>*</button>
-          <button onClick={this.props.onDivied}>/</button>
+          <button onClick={this.props.onDivide}>/</button>
         </div>
         <div>
           <button onClick={this.props.onRandomNumber}>Ran</button>

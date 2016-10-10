@@ -28,6 +28,8 @@ class Buttons extends Component {
                 <Incre
                     onIncre={this.props.handleIncrement}
                     onDecre={this.props.handleDecrement}
+                    onTimes={this.props.handleTimes}
+                    onDivide={this.props.handleDivide}
                     onIncrement1={this.props.handleIncrement1}
                     onDecrement1={this.props.handleDecrement1}
                     number={this.props.number1}
@@ -54,6 +56,8 @@ const mapDispatchToProps = (dispatch) => {
     return{
         handleIncrement:() => {dispatch(types.incre())},
         handleDecrement:() => {dispatch(types.decre())},
+        handleTimes:() => {dispatch(types.times1())},
+        handleDivide:() => {dispatch(types.divide1())},
         handleTyping:(text) => {dispatch(types.typing(text))},
         handleIncrement1:() => {
           return dispatch(types.increment1())

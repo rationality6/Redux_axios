@@ -36,7 +36,7 @@ export default function counter(state = initialState, action) {
         ...state,
         number: state.number * 2
       }
-    case types.DIVIED:
+    case types.DIVIDE:
       return{
         ...state,
         number: state.number / 2
@@ -44,7 +44,7 @@ export default function counter(state = initialState, action) {
     case types.RANDOMNUMBER:
       return{
         ...state,
-        number: action.number
+        number: action.num
       }
     default:
       return state;
