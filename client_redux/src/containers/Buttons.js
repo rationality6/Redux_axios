@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Incre from '../components/Incre'
 
-import * as types from '../actions'
+import * as actions from '../actions'
 import {connect} from 'react-redux';
 
 // const defaultProps = {
@@ -54,16 +54,16 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     // return bindActionCreators(actions,dispatch);
     return{
-        handleIncrement:() => {dispatch(types.incre())},
-        handleDecrement:() => {dispatch(types.decre())},
-        handleTimes:() => {dispatch(types.times1())},
-        handleDivide:() => {dispatch(types.divide1())},
-        handleTyping:(text) => {dispatch(types.typing(text))},
+        handleIncrement:() => {dispatch(actions.incre())},
+        handleDecrement:() => {dispatch(actions.decre())},
+        handleTimes:() => {dispatch(actions.times1())},
+        handleDivide:() => {dispatch(actions.divide1())},
+        handleTyping:(text) => {dispatch(actions.typing(text))},
         handleIncrement1:() => {
-          return dispatch(types.increment1())
+          return dispatch(actions.increment1())
         },
         handleDecrement1:() => {
-          return dispatch(types.decrement1())
+          return dispatch(actions.decrement1())
         }
     };
 };

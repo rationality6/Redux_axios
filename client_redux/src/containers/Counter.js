@@ -17,6 +17,7 @@ class Counter extends Component {
     this.setRandomColor = this.setRandomColor.bind(this);
     this.handleTextCopy = this.handleTextCopy.bind(this);
     this.handleRandomNumber = this.handleRandomNumber.bind(this);
+    this.getTextData = this.getTextData.bind(this);
   }
 
   handleRandomNumber(){
@@ -38,6 +39,11 @@ class Counter extends Component {
     this.props.handleTextCopy(text)
   }
 
+  getTextData(){
+    const userInputData = prompt()
+    this.props.handleChangeText(userInputData)
+  }
+
   render() {
     const color = this.props.color;
     const style = {
@@ -54,11 +60,17 @@ class Counter extends Component {
           onRandomNumber={this.handleRandomNumber}
           onRandomizeColor={this.setRandomColor}
         ></Control>
-      <p>{this.props.text}</p>
+        <p>
+          {this.props.text}
+        </p>
         <input
           value={this.props.text}
           onChange={this.handleTextCopy}
         />
+        <div>
+          {this.props.title}
+          <button onClick={this.getTextData}>Change</button>
+        </div>
       </div>
     );
   }
@@ -72,6 +84,7 @@ const mapStateToProps = (state) => {
     color: state.ui.color,
     dumbObject: state.counter.dumbObject,
     text: state.typeCopy.text,
+    title: state.changeText.text,
   }
 }
 
@@ -85,6 +98,7 @@ const mapDispatchToProps = (dispatch) => {
     setRandomNumber:(num)=> {dispatch(actions.randomNumber(num))},
     handleSetColor:(color) => {dispatch(actions.setColor(color))},
     handleTextCopy:(text) => {dispatch(actions.typeCopy(text))},
+    handleChangeText:(text) => {dispatch(actions.changeText(text))}
   };
 };
 

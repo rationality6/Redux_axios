@@ -13,7 +13,7 @@ class ProjectApi {
     getUsers() {
         this.client.get(`reacts.json`)
           .then((response) => {
-              this.dispatch(actions.setUserData(response.data))
+              this.dispatch(actions.setUsersData(response.data))
         })
           .catch((error) => {
             console.log(error);

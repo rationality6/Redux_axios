@@ -1,4 +1,4 @@
-import * as types from '../actions/ActionTypes'
+import * as counterActions from '../actions/CounterActions'
 
 const initialState = {
   number: 0,
@@ -13,7 +13,7 @@ const initialState = {
 
 export default function counter(state = initialState, action) {
   switch (action.type) {
-    case types.INCREMENT:
+    case counterActions.INCREMENT:
       return {
         ...state,
         number: state.number + 1,
@@ -22,7 +22,7 @@ export default function counter(state = initialState, action) {
           d: 3
         }
       };
-    case types.DECREMENT:
+    case counterActions.DECREMENT:
       return {
         ...state,
         number: state.number - 1,
@@ -31,17 +31,17 @@ export default function counter(state = initialState, action) {
           b: 3
         }
       }
-    case types.TIMES:
+    case counterActions.TIMES:
       return {
         ...state,
         number: state.number * 2
       }
-    case types.DIVIDE:
+    case counterActions.DIVIDE:
       return{
         ...state,
         number: state.number / 2
       }
-    case types.RANDOMNUMBER:
+    case counterActions.RANDOMNUMBER:
       return{
         ...state,
         number: action.num

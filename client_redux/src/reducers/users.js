@@ -1,11 +1,11 @@
-import * as types from '../actions/ActionTypes'
+import * as usersActions from '../actions/UsersActions'
 
 const initialState = {
     data: []
 }
 export default function users(state = initialState, action) {
     switch (action.type) {
-        case types.SET_USER_DATA: {
+        case usersActions.SET_USERS_DATA: {
             return { ...state, data: action.data}
         }
 
