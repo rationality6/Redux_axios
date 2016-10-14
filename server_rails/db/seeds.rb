@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+REACTS_TO_CREATE = 15
+
+REACTS_TO_CREATE.times do
+    React.create name:      Faker::Name.name ,
+                 phone:     Faker::PhoneNumber.cell_phone
+end
+
+puts Cowsay.say "Created #{REACTS_TO_CREATE} reacts"
