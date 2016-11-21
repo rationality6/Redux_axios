@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Link, Match, Miss } from 'react-router';
+import {BrowserRouter as Router, Link, Match, Miss} from 'react-router';
 
 import Home from './components/Home'
 import Counter from './containers/Counter'
@@ -8,31 +8,34 @@ import Users from './containers/Users';
 import Topics from './containers/Topics'
 import Show from './containers/Show'
 
-
 class App extends Component {
 
-    render() {
-        return (
-            <Router>
-                <div>
-                    <Link to="/">Home</Link>
-                    | <Link to="/counter">Counter</Link>
-                    | <Link to="/buttons">Buttons</Link>
-                    | <Link to="/users">Users</Link>
-                    | <Link to="/topics">Topics</Link>
-                    <hr/>
+  render() {
+    return (
+      <Router>
+        <div>
+          <Link to="/">Home</Link>
+          |
+          <Link to="/counter">Counter</Link>
+          |
+          <Link to="/buttons">Buttons</Link>
+          |
+          <Link to="/users">Users</Link>
+          |
+          <Link to="/topics">Topics</Link>
+          <hr/>
 
-                    <Match exactly pattern='/' component={Home}></Match>
-                    <Match pattern='/counter' component={Counter}></Match>
-                    <Match pattern='/buttons' component={Buttons}></Match>
-                    <Match pattern='/users' component={Users}></Match>
-                    <Match pattern='/topics' component={Topics}></Match>
-                    <Match pattern={`/topics/rendering/:id`} component={Show}></Match>
+          <Match exactly pattern='/' component={Home}></Match>
+          <Match pattern='/counter' component={Counter}></Match>
+          <Match pattern='/buttons' component={Buttons}></Match>
+          <Match pattern='/users' component={Users}></Match>
+          <Match pattern='/topics' component={Topics}></Match>
+          <Match pattern={`/topics/rendering/:id`} component={Show}></Match>
 
-                </div>
-            </Router>
-        )
-    }
+        </div>
+      </Router>
+    )
+  }
 }
 
 export default App;

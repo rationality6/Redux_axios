@@ -21,16 +21,13 @@ class Counter extends Component {
   }
 
   handleRandomNumber(){
-    const randomNumber = ~~(Math.random()*255)
+    const randomNumber = ~~(Math.random() * 255)
     this.props.setRandomNumber(randomNumber)
   }
 
-  setRandomColor(){
-    const color = [
-      Math.floor((Math.random()*55)+ 200),
-      Math.floor((Math.random()*55)+ 200),
-      Math.floor((Math.random()*55)+ 200),
-    ]
+  setRandomColor() {
+    const makeRandomColor = () => ~~ (Math.random() * 255)
+    const color = [makeRandomColor(), makeRandomColor(), makeRandomColor()];
     this.props.handleSetColor(color);
   }
 

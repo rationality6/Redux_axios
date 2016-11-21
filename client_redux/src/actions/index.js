@@ -66,6 +66,9 @@ export function typing(text) {
   return {type: buttonsActions.TYPING, text}
 }
 
+export function setColor1(color){
+  return {type: buttonsActions.SET_COLOR1, color}
+}
 
 //Users
 export function setUsersData(data) {
